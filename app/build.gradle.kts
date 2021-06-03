@@ -1,6 +1,8 @@
 plugins {
     id(BuildPlugins.androidApplication)
     id(BuildPlugins.kotlinAndroid)
+    id(BuildPlugins.kotlinKapt)
+    id(BuildPlugins.androidHilt)
 }
 
 android {
@@ -30,12 +32,17 @@ android {
     kotlinOptions {
         jvmTarget = BuildPlugins.Versions.jvmTarget
     }
+    viewBinding {
+        android.buildFeatures.viewBinding = true
+    }
 }
 
 dependencies {
+    kapt(Libraries.hiltCompiler)
 
     implementation(Libraries.kotlinStdLib)
     implementation(Libraries.ktxCore)
+    implementation(Libraries.fragmentKtx)
     implementation(Libraries.appCompat)
     implementation(Libraries.material)
     implementation(Libraries.constraintLayout)
@@ -52,4 +59,6 @@ dependencies {
     androidTestImplementation(TestLibraries.testExtJunit)
     androidTestImplementation(TestLibraries.testRules)
     androidTestImplementation(TestLibraries.espressoCore)
+    implementation(Libraries.hilt)
+    implementation(Libraries.glide)
 }

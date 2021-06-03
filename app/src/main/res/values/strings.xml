@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="failure_network_connection">No Network Connection.</string>
+    <string name="failure_server_error">Server Error</string>
+    <string name="failure_current_weather_non_existent">Current Weather Not Existent.</string>
+    <string name="symbol_celsius">°C</string>
 </resources>

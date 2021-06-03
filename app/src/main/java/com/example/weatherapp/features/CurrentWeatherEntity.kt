@@ -3,6 +3,51 @@ package com.example.weatherapp.features
 import com.example.weatherapp.core.extension.empty
 import com.example.weatherapp.features.child.*
 
+/*
+    "coord": {
+        "lon": 121.5319,
+        "lat": 25.0478
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 29.48,
+        "feels_like": 36.48,
+        "temp_min": 28.64,
+        "temp_max": 32.99,
+        "pressure": 1007,
+        "humidity": 83
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.68,
+        "deg": 110,
+        "gust": 6.26
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1622620819,
+    "sys": {
+        "type": 2,
+        "id": 266033,
+        "country": "TW",
+        "sunrise": 1622581443,
+        "sunset": 1622630397
+    },
+    "timezone": 28800,
+    "id": 1668341,
+    "name": "Taipei",
+    "cod": 200
+ */
+
 data class CurrentWeatherEntity(
     private val coord: Coord,
     private val weather: List<Weather>,
